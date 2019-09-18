@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'products.apps.ProductsConfig',
     'clients.apps.ClientsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -74,6 +75,7 @@ WSGI_APPLICATION = 'market.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -81,6 +83,18 @@ DATABASES = {
     }
 }
 
+'''
+DATABASES = {
+    'default':{
+        'ENGINE': 'django.db.backend,psycop2',
+        'NAME': 'market',
+        'USER': 'postgres',
+        'PASSWORD': 'unicesmag',
+        'HOST': 'localhost'
+        'PORT': '',#Empty->Default: 5432
+    }
+}
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
